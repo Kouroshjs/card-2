@@ -1,0 +1,177 @@
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Lexend Deca', sans-serif; */
+
+/* //////colors ///////////
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6) */
+
+body {
+    background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+    width: 90%;
+    margin: 1rem auto;
+
+
+}
+
+.main {
+
+    width: 100%;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 5px;
+}
+
+.card-parts {
+    width: 100%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(1, fr);
+
+}
+
+.top {
+    width: 100%;
+    height: 25rem;
+    grid-row: 1/2;
+
+}
+
+.top .image {
+    background-image: url(../images/image-header-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: inherit;
+}
+
+.image div {
+    background-color: rgba(103, 0, 162, 0.5);
+    width: 100%;
+    height: 100%;
+
+}
+
+.bottom {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+
+}
+
+.bottom h1 {
+    font-size: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.bottom h2 {
+    text-align: center;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 3rem;
+}
+
+.box {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.box span {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+
+
+}
+
+.p-1,
+.p-2,
+.p-3 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+
+.bottom h1 span {
+    font-size: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: hsl(277, 64%, 61%);
+}
+
+@media (min-width:1440px) {
+    .card-parts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top {
+        grid-column: 2/3;
+        height: 100%;
+    }
+
+    .bottom {
+        grid-column: 1/2;
+        padding: 4rem;
+        justify-content: flex-start;
+        align-items: start;
+        padding-right: 5rem;
+    }
+
+    .top .image {
+        height: inherit;
+    }
+
+    .bottom-num {
+        display: flex;
+
+    }
+
+    .container {
+        width: 80%;
+        margin-top: 8rem;
+
+    }
+
+    .bottom h1 {
+        text-align: left;
+    }
+
+    .bottom h2 {
+        text-align: left;
+        font-size: larger;
+        padding-top: 1rem;
+    }
+
+    .box {
+        padding-right: 3.5rem;
+        text-align: start;
+        padding-top: 2rem;
+    }
+
+    .top .image {
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 5px;
+    }
+}
